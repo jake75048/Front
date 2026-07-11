@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:opsz,wght@14..32,100..900&display=swap");
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    background-color: #141414;
+    color: #FFFFFF; /* Adicionei uma cor branca para o texto não sumir no fundo escuro */
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.logo a {
+    /* Próximo passo: estilizar o link do seu logo aqui */
+}

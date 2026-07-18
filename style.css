@@ -1,0 +1,566 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner-livros {
+    width: 100%;
+    overflow: hidden;
+    background: #e7c286;
+    padding: 20px 0;
+    position: relative;
+}
+
+.banner-livros h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #3b2f2f;
+}
+
+
+.faixa-livros {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: passarLivros 15s linear infinite;
+}
+
+.faixa-livros img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+@keyframes passarLivros {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+body{
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    color: #4a4038;
+    background: #faf7f2;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 40%;
+    display: block;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+:root{
+    --azul-pastel: #f1f4f4;
+    --azul-pastel-escuro: #e7c286;
+    --rosa-pastel: #e7c286;
+    --rosa-pastel-escuro: #1e1e1e;
+    --creme: #000000;
+    --texto: #050505;   
+}
+
+.button{
+    display: inline-block;
+    background: var(--rosa-pastel-escuro);
+    color: #ecd23c;
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 24px;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.button:hover{
+    background: var(--azul-pastel);
+    transform: translateY(-2px);
+}
+
+
+header{
+    background: var(--azul-pastel);
+    padding: 18px 0;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo a{
+    color: #f3b86e;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.logo span{
+    color: var(--rosa-pastel-escuro);
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav ul.leftside{
+    display: flex;
+    gap: 32px;
+}
+
+header nav ul.leftside a{
+    color: #3d4d55;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+header nav ul.leftside a:hover{
+    opacity: 0.7;
+}
+
+header nav .rightside .button{
+    padding: 10px 22px;
+    font-size: 0.9rem;
+}
+
+.menu{
+    display: none;
+}
+
+.menu-icon{
+    width: 28px;
+    cursor: pointer;
+}
+
+.menu-icon div{
+    height: 3px;
+    background: rgb(231, 185, 33);
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+/* ===================== HERO ===================== */
+.hero{
+    background: linear-gradient(135deg, #efb03d, #d8e6ee);
+    padding: 70px 0;
+}
+
+.hero .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero .leftside{
+    max-width: 480px;
+    color: #3d4d55;
+}
+
+.hero h1{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero p{
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    opacity: 0.9;
+}
+
+.hero .rightside img{
+    width: 320px;
+    max-width: 100%;
+}
+
+/* ===================== SEARCH ===================== */
+.search{
+    background: var(--rosa-pastel);
+    padding: 40px 0;
+}
+
+.search-title{
+    color: #5a3c40;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.search-sides{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.search-sides .leftside{
+    flex: 1;
+    min-width: 260px;
+}
+
+.search-sides input,
+.search-sides select{
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4a4038;
+    height: 100%;
+}
+
+.search-sides .rightside{
+    width: 240px;
+}
+
+.search-sides input::placeholder{
+    color: #8a7d75;
+    font-weight: bold;
+}
+
+
+main{
+    padding: 60px 0;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.product-item{
+    background: #ffdeb3;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(169, 198, 216, 0.35);
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-item:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(169, 198, 216, 0.5);
+}
+
+.product-item .warning{
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--rosa-pastel-escuro);
+    color: #4a2b2f;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.product-item .photo{
+    background: #f2ede6;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-item .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-item .info{
+    padding: 18px 20px 22px;
+}
+
+.product-category{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--azul-pastel-escuro);
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.product-name{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.product-price{
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: var(--rosa-pastel-escuro);
+}
+
+.formulario-da-livraria h1{
+color: white;
+
+}
+.formulario-da-livraria{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width:400px;
+   
+
+    margin-top:18%;
+    margin-bottom: 20%;
+    margin-left: 10%;
+    
+    background-image:url('./livros/open-book-white-background-pages-book-knowledge-literature/gettyimages-1061868580.webp');
+    background-size:100% 100%;
+    background-position:center;
+    backgorund-repeat: no-repeat;
+
+    padding:30px;
+    border-radius: 12px;
+      
+    
+    linear-gradient(rgba(255,255,255,1),rgba(255,255,255,)0),url('./livros/open-book-white-background-pages-book-knowledge-literature/gettyimages-1061868580.webp');
+    background-size:cover;
+    background-position:center;
+    padding: 30px;
+
+    .botao-outline {
+    background-color: transparent;
+    color: #d1d5d8; 
+    border: 2px solid #e3e3e3; 
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-outline:hover {
+    background-color: #5292d2; 
+    color: white; 
+}
+}
+
+
+
+.form 
+{
+display:flex;
+flex-direction: column;
+gap:8px
+
+}
+
+.form  input 
+{
+padding: 10px;
+border:1px solid #d0c9c9;
+border-radius:5px;
+font-size: 1rem;
+background-color: #e0b44f;
+
+}
+
+.form input:focus
+{
+outline: none;
+border-color: var(--rosa-paste-escuro);
+}
+
+footer{
+    background: var(--azul-pastel-escuro);
+    padding: 26px 0;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+footer .logo a{
+    color: #3d4d55;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+footer .logo span{
+    color: var(--rosa-pastel-escuro);
+}
+
+footer .copyrights p{
+    color: #3d4d55;
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+
+@media (max-width: 900px){
+    header nav{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .product-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .hero .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .search-sides{
+        flex-direction: column;
+    }
+
+    .search-sides .rightside{
+        width: 100%;
+    }
+
+    .product-grid{
+        grid-template-columns: 1fr;
+    }
+
+    footer .container{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   MODAL DE SUCESSO (QUADRADO VERDE ESTILIZADO)
+   ========================================================================== */
+
+/* 1. O fundo escuro que cobre a tela inteira */
+.modal-sucesso {
+    display: none; /* Começa escondido, o JS muda para 'flex' no envio */
+    position: fixed; /* Fica travado na tela, ignorando rolagens */
+    z-index: 9999; /* Garante que vai ficar por cima de qualquer elemento */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com 70% de transparência */
+    justify-content: center; /* Centraliza o quadrado horizontalmente */
+    align-items: center; /* Centraliza o quadrado verticalmente */
+}
+
+/* 2. O quadrado verde da mensagem */
+.conteudo-modal {
+    background-color: #2ecc71; /* Verde vibrante de sucesso */
+    color: white; /* Texto totalmente branco */
+    padding: 40px;
+    border-radius: 15px; /* Cantos bem arredondados e modernos */
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Sombra suave para dar profundidade */
+    width: 90%;
+    max-width: 450px; /* Largura máxima do quadrado */
+    animation: abrirModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação com leve "efeito elástico" */
+}
+
+/* 3. O círculo com o ícone de check (✔) */
+.icone-sucesso {
+    font-size: 60px;
+    font-weight: bold;
+    color: #2ecc71; /* O check interno fica verde */
+    background-color: white; /* O círculo fica branco */
+    width: 100px;
+    height: 100px;
+    line-height: 100px; /* Alinha o ✔ perfeitamente no centro vertical */
+    border-radius: 50%; /* Transforma o quadrado em um círculo perfeito */
+    margin: 0 auto 25px auto; /* Centraliza horizontalmente e dá espaço para o texto abaixo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 4. Textos de dentro do modal */
+.conteudo-modal h2 {
+    font-size: 32px;
+    margin: 0 0 10px 0;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.conteudo-modal p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+    font-family: Arial, sans-serif;
+    opacity: 0.9; /* Deixa o texto levemente suave */
+}
+
+/* 5. Botão "Entendido" para fechar */
+.botao-fechar {
+    background-color: white;
+    color: #27ae60; /* Texto em tom verde escuro */
+    border: none;
+    padding: 12px 35px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito ao passar o mouse no botão de fechar */
+.botao-fechar:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px); /* Sobe o botão sutilmente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.botao-fechar:active {
+    transform: translateY(0); /* Volta ao normal ao clicar */
+}
+
+/* Animação que faz o modal surgir do fundo aumentando de tamanho */
+@keyframes abrirModal {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

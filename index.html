@@ -16,13 +16,13 @@
                 <img src="./livros/Logo-removebg-preview.png" alt="Logo">
             </div>
             <nav>
-                <ul class="leftside">
-                    <li><a href="">Início</a></li>
-                    <li><a href="">Livros</a></li>
-                </ul>
-                <div class="rightside">
-                    <a href="" class="button">☰</a>
-                </div>
+            <ul class="leftside">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Livros</a></li>
+            </ul>
+            <div class="rightside">
+            <a href="#" class="button">☰</a>
+            </div>
             </nav>
             <div class="menu">
                 <div class="menu-icon">
@@ -39,7 +39,7 @@
             <div class="leftside">
                 <h1>O que sabemos é uma gota; o que ignoramos é um oceano. 📚</h1>
                 <p>"Ler é viajar sem sair do lugar. Ler é ter um passaporte para outros mundos, outras vidas, outras épocas."</p>
-                <a href="" class="button">Fazer pedido</a>
+                <a href="#cadastro" class="button">Fazer pedido</a>
             </div>
             <div class="rightside">
                 <img src="./livros/main.jpg" alt="Pilha de livros" />
@@ -68,6 +68,7 @@
     </section>
 
     <main>
+        <!-- Carrossel Infinito de Capas -->
         <section class="banner-livros">
             <h2>Livros em destaque</h2>
             <div class="faixa-livros">
@@ -82,134 +83,115 @@
                 <img src="./livros/pj3.jpg" alt="Livro 3">
                 <img src="./livros/pj2.jpg" alt="Livro 4">
                 <img src="./livros/zoroperdido.jpg" alt="Livro 5">
-
-                <img src="./livros/percy jackson 1.jpg" alt="Livro 1">
-                <img src="./livros/pj4.jpg" alt="Livro 2">
-                <img src="./livros/pj3.jpg" alt="Livro 3">
-                <img src="./livros/pj2.jpg" alt="Livro 4">
-                <img src="./livros/zoroperdido.jpg" alt="Livro 5">
-
-                <img src="./livros/percy jackson 1.jpg" alt="Livro 1">
-                <img src="./livros/pj4.jpg" alt="Livro 2">
-                <img src="./livros/pj3.jpg" alt="Livro 3">
-                <img src="./livros/pj2.jpg" alt="Livro 4">
-                <img src="./livros/zoroperdido.jpg" alt="Livro 5">
             </div>
         </section>
+        <section class="Slide-banner">
+            <div class="container">
+                <h2>☆ Destaques da semana ☆</h2>
+                <p id="descricao" class="subtitulo">Clique no livro abaixo para trocar o destaque!</p>
+                
+                <div class="container-imagem">
+                    <img id="imagem-dos-livros" src="https://m.media-amazon.com/images/I/51Ff0RFNH1L._AC_UF1000,1000_QL80_.jpg" alt="Livro em Destaque">
+                </div>
 
+                <div class="botoes-livros">
+                    <button id="btn1">Livro 1</button>
+                    <button id="btn2">Livro 2</button>
+                    <button id="btn3">Livro 3</button>
+                    <button id="btn4">Livro 4</button>
+                </div>
+
+                <button id="btnmodal">Detalhes do Livro</button>
+            </div>
+        </section>
         <div class="container">
             <div class="product-grid">
-                <a href="" class="product-item">
+                <a href="#" class="product-item">
                     <div class="warning">Lançamento</div>
                     <div class="photo">
                         <img src="./livros/percyj11.jpg" alt="Percy Jackson 11" />
-                    </div>
-                    <div class="info">
+                        </div>
+                        <div class="info">
                         <div class="product-category">fantasia</div>
                         <div class="product-name">Percy Jackson / Ladrão de raios</div>
                         <div class="product-price">R$ 39,90</div>
-                    </div>
+                        </div>
                 </a>
-                <a href="" class="product-item">
+                <a href="#" class="product-item">
                     <div class="photo">
-                        <img src="./livros/pj2.jpg" alt="Além das Estrelas" />
+                    <img src="./livros/pj2.jpg" alt="O Mar de Monstros" />
                     </div>
                     <div class="info">
-                        <div class="product-category">Ficção</div>
-                        <div class="product-name">Percy Jackson /O Mar de Monstros</div>
-                        <div class="product-price">R$ 44,90</div>
+                    <div class="product-category">Ficção</div>
+                    <div class="product-name">Percy Jackson / O Mar de Monstros</div>
+                    <div class="product-price">R$ 44,90</div>
                     </div>
                 </a>
-                <a href="" class="product-item">
+                <a href="#" class="product-item">
                     <div class="photo">
-                        <img src="./livros/pj3.jpg" alt="A Baleia Curiosa" />
+                    <img src="./livros/pj3.jpg" alt="A Maldição do Titã" />
                     </div>
                     <div class="info">
-                        <div class="product-category">Infantil</div>
-                        <div class="product-name">Percy Jackson /O Mar de Monstros</div>
-                        <div class="product-price">R$ 29,90</div>
+                    <div class="product-category">Infantil</div>
+                    <div class="product-name">Percy Jackson / A Maldição do Titã</div>
+                    <div class="product-price">R$ 29,90</div>
                     </div>
                 </a>
-                <a href="" class="product-item">
+                <a href="#" class="product-item">
                     <div class="photo">
-                        <img src="./livros/pj4.jpg" alt="Hábitos que Transformam" />
+                    <img src="./livros/pj4.jpg" alt="O Último Olimpiano" />
                     </div>
                     <div class="info">
-                        <div class="product-category">Não-ficção</div>
-                        <div class="product-name">Percy Jackson /O Último Olimpiano</div>
-                        <div class="product-price">R$ 49,90</div>
+                    <div class="product-category">Não-ficção</div>
+                    <div class="product-name">Percy Jackson / O Último Olimpiano</div>
+                    <div class="product-price">R$ 49,90</div>
                     </div>
                 </a>
             </div>
-
-            <form class="formulario-da-livraria">
+            <form id="cadastro" class="formulario-da-livraria">
                 <h1>Cadastro</h1>
                 <div class="form">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" placeholder="Escreva seu nome" required>
-
-                    <label for="email">E-mail</label>
+                    <label for="email">E-mail:</label>
                     <input type="email" id="email" placeholder="ex: percyjackson@gmail.com" required>
-
-                    <label for="livro">Livro</label>
+                    <label for="livro">Livro:</label>
                     <input type="text" id="livro" placeholder="Livro da sua preferência" required>
                 </div>
                 <button type="submit" class="botao-outline">Enviar Cadastro</button>
             </form>
         </div>
     </main>
-
     <footer>
         <div class="container">
             <div class="logo">
-                <a href="">Livraria<span>•</span>Saber</a>
-                <ul>
-                    <li><a href="">Contato</a></li>
-                </ul>
+            <a href="#">Livraria<span>•</span>Saber</a>
+            <ul>
+            <li><a href="#">Contato</a></li>
+            </ul>
             </div>
             <div class="copyrights">
-                <p>Criado por Esdras Silvestre.</p>
+            <p>Criado por Esdras Silvestre.</p>
             </div>
         </div>
     </footer>
-
-   
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+        <h2>Detalhes do Livro</h2>
+        <p id="Detalhes">Autor: J.K. Rowling</p>
+        <button id="fechar">Fechar</button>
+        </div>
+    </div>
     <div id="modalSucesso" class="modal-sucesso">
         <div class="conteudo-modal">
-            <div class="icone-sucesso">✓</div>
-            <h2>Sucesso!</h2>
-            <p>Seu cadastro foi realizado corretamente.</p>
-            <button id="btnFecharModal" class="botao-fechar">Entendido</button>
+        <div class="icone-sucesso">✓</div>
+        <h2>Sucesso!</h2>
+        <p>Seu cadastro foi realizado corretamente.</p>
+        <button id="btnFecharModal" class="botao-fechar">Entendido</button>
         </div>
     </div>
 
-    <script>
-        const formulario = document.querySelector('form');
-        const modalSucesso = document.getElementById('modalSucesso');
-        const btnFecharModal = document.getElementById('btnFecharModal');
-
-        if (!formulario) {
-            console.error("Erro: O JavaScript não encontrou nenhuma tag <form> na página.");
-        }
-
-        if (formulario) {
-            formulario.addEventListener('submit', function(event) {
-                event.preventDefault(); 
-
-                if (modalSucesso) {
-                    modalSucesso.style.display = 'flex';
-                }
-                
-                formulario.reset();
-            });
-        }
-
-        if (btnFecharModal && modalSucesso) {
-            btnFecharModal.addEventListener('click', function() {
-                modalSucesso.style.display = 'none';
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

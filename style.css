@@ -1,9 +1,209 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --azul-pastel: #f1f4f4;
+    --azul-pastel-escuro: #e7c286;
+    --rosa-pastel: #e7c286;
+    --rosa-pastel-escuro: #1e1e1e;
+    --creme: #000000;
+    --texto: #050505;   
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    color: #4a4038;
+    background: #faf7f2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 40%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--rosa-pastel-escuro);
+    color: #ecd23c;
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 24px;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.button:hover {
+    background: var(--azul-pastel);
+    transform: translateY(-2px);
+}
+
+header {
+    background: var(--azul-pastel);
+    padding: 18px 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo a {
+    color: #f3b86e;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.logo span {
+    color: var(--rosa-pastel-escuro);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav ul.leftside {
+    display: flex;
+    gap: 32px;
+}
+
+header nav ul.leftside a {
+    color: #3d4d55;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+header nav ul.leftside a:hover {
+    opacity: 0.7;
+}
+
+header nav .rightside .button {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+}
+
+.menu {
+    display: none;
+}
+
+.menu-icon {
+    width: 28px;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    height: 3px;
+    background: rgb(231, 185, 33);
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #efb03d, #d8e6ee);
+    padding: 70px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero .leftside {
+    max-width: 480px;
+    color: #3d4d55;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    opacity: 0.9;
+}
+
+.hero .rightside img {
+    width: 320px;
+    max-width: 100%;
+}
+
+.search {
+    background: var(--rosa-pastel);
+    padding: 40px 0;
+}
+
+.search-title {
+    color: #5a3c40;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.search-sides {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.search-sides .leftside {
+    flex: 1;
+    min-width: 260px;
+}
+
+.search-sides input,
+.search-sides select {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4a4038;
+    height: 100%;
+}
+
+.search-sides .rightside {
+    width: 240px;
+}
+
+.search-sides input::placeholder {
+    color: #8a7d75;
+    font-weight: bold;
+}
+
+main {
+    padding: 60px 0;
+}
+
 .banner-livros {
     width: 100%;
     overflow: hidden;
@@ -17,7 +217,6 @@
     margin-bottom: 15px;
     color: #3b2f2f;
 }
-
 
 .faixa-livros {
     display: flex;
@@ -44,218 +243,62 @@
     }
 }
 
-
-body{
-    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
-    color: #4a4038;
+.Slide-banner {
+    text-align: center;
+    padding: 40px 0;
     background: #faf7f2;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+.Slide-banner h2 {
+    margin-bottom: 20px;
+    color: #3b2f2f;
 }
 
-ul{
-    list-style: none;
+.container-imagem {
+    max-width: 380px;
+    margin: 0 auto 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
-img{
-    max-width: 40%;
+.container-imagem img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
     display: block;
+    object-fit: cover;
 }
 
-.container{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
+.botoes-livros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-:root{
-    --azul-pastel: #f1f4f4;
-    --azul-pastel-escuro: #e7c286;
-    --rosa-pastel: #e7c286;
-    --rosa-pastel-escuro: #1e1e1e;
-    --creme: #000000;
-    --texto: #050505;   
-}
-
-.button{
-    display: inline-block;
+.botoes-livros button, #btnmodal {
     background: var(--rosa-pastel-escuro);
     color: #ecd23c;
-    font-weight: bold;
-    padding: 12px 28px;
-    border-radius: 24px;
-    transition: background 0.2s, transform 0.15s;
-}
-
-.button:hover{
-    background: var(--azul-pastel);
-    transform: translateY(-2px);
-}
-
-
-header{
-    background: var(--azul-pastel);
-    padding: 18px 0;
-}
-
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-.logo a{
-    color: #f3b86e;
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-}
-
-.logo span{
-    color: var(--rosa-pastel-escuro);
-}
-
-header nav{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-header nav ul.leftside{
-    display: flex;
-    gap: 32px;
-}
-
-header nav ul.leftside a{
-    color: #3d4d55;
-    font-size: 0.95rem;
-    transition: opacity 0.2s;
-}
-
-header nav ul.leftside a:hover{
-    opacity: 0.7;
-}
-
-header nav .rightside .button{
-    padding: 10px 22px;
-    font-size: 0.9rem;
-}
-
-.menu{
-    display: none;
-}
-
-.menu-icon{
-    width: 28px;
-    cursor: pointer;
-}
-
-.menu-icon div{
-    height: 3px;
-    background: rgb(231, 185, 33);
-    margin: 5px 0;
-    border-radius: 2px;
-}
-
-/* ===================== HERO ===================== */
-.hero{
-    background: linear-gradient(135deg, #efb03d, #d8e6ee);
-    padding: 70px 0;
-}
-
-.hero .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.hero .leftside{
-    max-width: 480px;
-    color: #3d4d55;
-}
-
-.hero h1{
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 18px;
-}
-
-.hero p{
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 28px;
-    opacity: 0.9;
-}
-
-.hero .rightside img{
-    width: 320px;
-    max-width: 100%;
-}
-
-/* ===================== SEARCH ===================== */
-.search{
-    background: var(--rosa-pastel);
-    padding: 40px 0;
-}
-
-.search-title{
-    color: #5a3c40;
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 22px;
-}
-
-.search-sides{
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.search-sides .leftside{
-    flex: 1;
-    min-width: 260px;
-}
-
-.search-sides input,
-.search-sides select{
-    width: 100%;
-    padding: 14px 18px;
     border: none;
-    border-radius: 24px;
-    font-size: 1rem;
+    padding: 10px 20px;
     font-weight: bold;
-    color: #4a4038;
-    height: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-.search-sides .rightside{
-    width: 240px;
+.botoes-livros button:hover, #btnmodal:hover {
+    background: #3b2f2f;
 }
 
-.search-sides input::placeholder{
-    color: #8a7d75;
-    font-weight: bold;
-}
-
-
-main{
-    padding: 60px 0;
-}
-
-.product-grid{
+.product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
-.product-item{
+.product-item {
     background: #ffdeb3;
     border-radius: 14px;
     overflow: hidden;
@@ -264,17 +307,17 @@ main{
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.product-item:hover{
+.product-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 22px rgba(169, 198, 216, 0.5);
 }
 
-.product-item .warning{
+.product-item .warning {
     position: absolute;
     top: 14px;
     left: 14px;
     background: var(--rosa-pastel-escuro);
-    color: #4a2b2f;
+    color: #edd14a;
     font-size: 0.75rem;
     font-weight: bold;
     padding: 6px 12px;
@@ -282,7 +325,7 @@ main{
     z-index: 2;
 }
 
-.product-item .photo{
+.product-item .photo {
     background: #f2ede6;
     height: 200px;
     display: flex;
@@ -291,17 +334,17 @@ main{
     overflow: hidden;
 }
 
-.product-item .photo img{
+.product-item .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.product-item .info{
+.product-item .info {
     padding: 18px 20px 22px;
 }
 
-.product-category{
+.product-category {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -310,48 +353,37 @@ main{
     margin-bottom: 6px;
 }
 
-.product-name{
+.product-name {
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
-.product-price{
+.product-price {
     font-size: 1.15rem;
     font-weight: bold;
     color: var(--rosa-pastel-escuro);
 }
 
-.formulario-da-livraria h1{
-color: white;
-
-}
-.formulario-da-livraria{
+.formulario-da-livraria {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width:400px;
-   
-
-    margin-top:18%;
-    margin-bottom: 20%;
-    margin-left: 10%;
-    
-    background-image:url('./livros/open-book-white-background-pages-book-knowledge-literature/gettyimages-1061868580.webp');
-    background-size:100% 100%;
-    background-position:center;
-    backgorund-repeat: no-repeat;
-
-    padding:30px;
-    border-radius: 12px;
-      
-    
-    linear-gradient(rgba(255,255,255,1),rgba(255,255,255,)0),url('./livros/open-book-white-background-pages-book-knowledge-literature/gettyimages-1061868580.webp');
-    background-size:cover;
-    background-position:center;
+    max-width: 400px;
+    margin: 18% auto 20% 10%;
+    background-image: url('./livros/open-book-white-background-pages-book-knowledge-literature/gettyimages-1061868580.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 30px;
+    border-radius: 12px;
+}
 
-    .botao-outline {
+.formulario-da-livraria h1 {
+    color: white;
+}
+
+.botao-outline {
     background-color: transparent;
     color: #d1d5d8; 
     border: 2px solid #e3e3e3; 
@@ -367,152 +399,64 @@ color: white;
     background-color: #5292d2; 
     color: white; 
 }
-}
 
-
-
-.form 
-{
-display:flex;
-flex-direction: column;
-gap:8px
-
-}
-
-.form  input 
-{
-padding: 10px;
-border:1px solid #d0c9c9;
-border-radius:5px;
-font-size: 1rem;
-background-color: #e0b44f;
-
-}
-
-.form input:focus
-{
-outline: none;
-border-color: var(--rosa-paste-escuro);
-}
-
-footer{
-    background: var(--azul-pastel-escuro);
-    padding: 26px 0;
-}
-
-footer .container{
+.form {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    gap: 8px;
 }
 
-footer .logo a{
-    color: #3d4d55;
-    font-weight: bold;
-    font-size: 1.1rem;
+.form input {
+    padding: 10px;
+    border: 1px solid #d0c9c9;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #e0b44f;
 }
 
-footer .logo span{
-    color: var(--rosa-pastel-escuro);
+.form input:focus {
+    outline: none;
+    border-color: var(--rosa-pastel-escuro);
 }
 
-footer .copyrights p{
-    color: #3d4d55;
-    font-size: 0.85rem;
-    opacity: 0.85;
-}
-
-
-@media (max-width: 900px){
-    header nav{
-        display: none;
-    }
-
-    .menu{
-        display: block;
-    }
-
-    .product-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px){
-    .hero .container{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero h1{
-        font-size: 2rem;
-    }
-
-    .search-sides{
-        flex-direction: column;
-    }
-
-    .search-sides .rightside{
-        width: 100%;
-    }
-
-    .product-grid{
-        grid-template-columns: 1fr;
-    }
-
-    footer .container{
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* ==========================================================================
-   MODAL DE SUCESSO (QUADRADO VERDE ESTILIZADO)
-   ========================================================================== */
-
-/* 1. O fundo escuro que cobre a tela inteira */
 .modal-sucesso {
-    display: none; /* Começa escondido, o JS muda para 'flex' no envio */
-    position: fixed; /* Fica travado na tela, ignorando rolagens */
-    z-index: 9999; /* Garante que vai ficar por cima de qualquer elemento */
+    display: none;
+    position: fixed;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com 70% de transparência */
-    justify-content: center; /* Centraliza o quadrado horizontalmente */
-    align-items: center; /* Centraliza o quadrado verticalmente */
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
 }
 
-/* 2. O quadrado verde da mensagem */
 .conteudo-modal {
-    background-color: #2ecc71; /* Verde vibrante de sucesso */
-    color: white; /* Texto totalmente branco */
+    background-color: #2ecc71;
+    color: white;
     padding: 40px;
-    border-radius: 15px; /* Cantos bem arredondados e modernos */
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Sombra suave para dar profundidade */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     width: 90%;
-    max-width: 450px; /* Largura máxima do quadrado */
-    animation: abrirModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação com leve "efeito elástico" */
+    max-width: 450px;
+    animation: abrirModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* 3. O círculo com o ícone de check (✔) */
 .icone-sucesso {
     font-size: 60px;
     font-weight: bold;
-    color: #2ecc71; /* O check interno fica verde */
-    background-color: white; /* O círculo fica branco */
+    color: #2ecc71;
+    background-color: white;
     width: 100px;
     height: 100px;
-    line-height: 100px; /* Alinha o ✔ perfeitamente no centro vertical */
-    border-radius: 50%; /* Transforma o quadrado em um círculo perfeito */
-    margin: 0 auto 25px auto; /* Centraliza horizontalmente e dá espaço para o texto abaixo */
+    line-height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 25px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* 4. Textos de dentro do modal */
 .conteudo-modal h2 {
     font-size: 32px;
     margin: 0 0 10px 0;
@@ -525,13 +469,12 @@ footer .copyrights p{
     line-height: 1.5;
     margin: 0 0 30px 0;
     font-family: Arial, sans-serif;
-    opacity: 0.9; /* Deixa o texto levemente suave */
+    opacity: 0.9;
 }
 
-/* 5. Botão "Entendido" para fechar */
 .botao-fechar {
     background-color: white;
-    color: #27ae60; /* Texto em tom verde escuro */
+    color: #27ae60;
     border: none;
     padding: 12px 35px;
     border-radius: 6px;
@@ -542,18 +485,67 @@ footer .copyrights p{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Efeito ao passar o mouse no botão de fechar */
 .botao-fechar:hover {
     background-color: #f8f9fa;
-    transform: translateY(-2px); /* Sobe o botão sutilmente */
+    transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .botao-fechar:active {
-    transform: translateY(0); /* Volta ao normal ao clicar */
+    transform: translateY(0);
 }
 
-/* Animação que faz o modal surgir do fundo aumentando de tamanho */
+.modal {
+    display: none;        
+    position: fixed;     
+    z-index: 10000;       
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); 
+    justify-content: center;
+    align-items: center;     
+}
+
+.modal-conteudo {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: abrirModal 0.3s ease-out;
+}
+
+.modal-conteudo h2 {
+    margin-bottom: 15px;
+    color: #3b2f2f;
+}
+
+.modal-conteudo p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #4a4038;
+}
+
+#fechar {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#fechar:hover {
+    background: #c0392b;
+}
+
 @keyframes abrirModal {
     from {
         transform: scale(0.7);
@@ -562,5 +554,76 @@ footer .copyrights p{
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+footer {
+    background: var(--azul-pastel-escuro);
+    padding: 26px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+footer .logo a {
+    color: #3d4d55;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+footer .logo span {
+    color: var(--rosa-pastel-escuro);
+}
+
+footer .copyrights p {
+    color: #3d4d55;
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+    header nav {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .search-sides {
+        flex-direction: column;
+    }
+
+    .search-sides .rightside {
+        width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
     }
 }
